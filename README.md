@@ -17,6 +17,7 @@ SCREENENV_NEW_WIDTH=144
 SCREENENV_NEW_HEIGHT=36
 SCREENENV_FULLSCREEN=False
 ```
+You can rename the `template.env` file to `.env`
 
 Run `record.py`, to record the keyboard and mouse actions you want to do on reset:
 ```
