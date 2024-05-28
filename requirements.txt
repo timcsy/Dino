@@ -1,0 +1,4 @@
+screen_games>=0.0.1
+stable-baselines3
+grad-cam
+Pillow
