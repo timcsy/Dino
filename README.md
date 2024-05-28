@@ -1,4 +1,8 @@
-# Dino with Reinforcement Learning
+# Dino Game with Reinforcement Learning
+
+Using OpenAI Gym and Stable Baseline 3 to play the dino game.
+
+Dino game: [chrome://dino/](chrome://dino/)
 
 ## Setup
 
@@ -7,7 +11,7 @@ Install Python 3 packages:
 pip install requirements.txt
 ```
 
-Edit your `.env` file, for example:
+Edit or create the `.env` file, for example:
 ```
 SCREENENV_LEFT=0
 SCREENENV_TOP=290
