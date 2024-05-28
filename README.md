@@ -10,9 +10,9 @@ pip install requirements.txt
 Edit your `.env` file, for example:
 ```
 SCREENENV_LEFT=0
-SCREENENV_TOP=330
-SCREENENV_WIDTH=1440
-SCREENENV_HEIGHT=360
+SCREENENV_TOP=290
+SCREENENV_WIDTH=1920
+SCREENENV_HEIGHT=480
 SCREENENV_NEW_WIDTH=144
 SCREENENV_NEW_HEIGHT=36
 SCREENENV_FULLSCREEN=False
@@ -23,7 +23,7 @@ Run `record.py`, to record the keyboard and mouse actions you want to do on rese
 python record.py
 ```
 
-Press Ctrl + R to stop recording.
+Press Alt + R to stop recording.
 
 ## Ussage
 
@@ -86,5 +86,9 @@ For example (For different Neural Network Layer, say <layer_num> is 3 or 4):
 python cam.py 3
 
 python cam.py 4
+
+Default layer is 3:
+
+python cam.py
 ```
 Remember to change the model name inside the code.

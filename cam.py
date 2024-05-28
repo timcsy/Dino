@@ -4,7 +4,7 @@ from wrapper import DinoWrapper
 from stable_baselines3 import PPO
 
 from stable_baselines3.common.preprocessing import preprocess_obs
-from pytorch_grad_cam import GradCAM, ScoreCAM, GradCAMPlusPlus, AblationCAM, XGradCAM, EigenCAM, EigenGradCAM, FullGrad
+from pytorch_grad_cam import GradCAMPlusPlus
 from pytorch_grad_cam.utils.image import show_cam_on_image
 
 import os
@@ -21,7 +21,7 @@ def explain(cam, preprocessed_obs, img):
 env = gym.make('screen_games/ScreenEnv-v0')
 env = DinoWrapper(env, macro='record.json')
 
-model = PPO.load('dino_ppo', env=env)
+model = PPO.load('dino_ppo_pretrained', env=env)
 
 layer = 3
 if len(sys.argv) > 1:
@@ -29,8 +29,12 @@ if len(sys.argv) > 1:
 if not os.path.exists('cam'):
     os.makedirs('cam')
 
-target_layers = [model.policy.features_extractor.extractors.screen.cnn[layer]]
-cam = GradCAMPlusPlus(model=model.policy.features_extractor.extractors.screen, target_layers=target_layers)
+try:
+    target_layers = [model.policy.features_extractor.extractors.screen.cnn[layer]]
+    cam = GradCAMPlusPlus(model=model.policy.features_extractor.extractors.screen, target_layers=target_layers)
+except Exception as e:
+    target_layer = model.policy.features_extractor.extractors.screen.cnn[layer]
+    cam = GradCAMPlusPlus(model=model.policy.features_extractor.extractors.screen, target_layer=target_layer)
 
 observation, info = env.reset()
 
