@@ -2,7 +2,7 @@
 
 Using OpenAI Gym and Stable Baseline 3 to play the dino game.
 
-Dino game: <a href="chrome://dino/">chrome://dino/</a>
+Dino game: chrome://dino/
 
 ## Setup
 
