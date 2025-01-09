@@ -8,7 +8,7 @@ Dino game: chrome://dino/
 
 Install Python 3 packages:
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 Edit or create the `.env` file, for example:
@@ -30,9 +30,11 @@ python record.py
 
 Press Alt + R to stop recording.
 
-## Ussage
+## Usage
 
-### Ussage - Basic
+Press Esc to pause or resume the game.
+
+### Usage - Basic
 
 To open the environment, you can do the following lines:
 ```=Python
@@ -44,21 +46,21 @@ env = gym.make('screen_games/ScreenEnv-v0')
 env = DinoWrapper(env, macro='record.json')
 ```
 
-### Ussage - Random
+### Usage - Random
 
 To run the game randomly, run `dino.py`:
 ```
 python dino.py
 ```
 
-### Ussage - Manual
+### Usage - Manual
 
 To run the game manually, run `manual.py`:
 ```
 python manual.py
 ```
 
-### Ussage - Training
+### Usage - Training
 
 To train the reinforcement learning AI, run `training.py`:
 ```
@@ -72,7 +74,7 @@ python training_cont.py
 ```
 Remember to change the model name inside the code.
 
-### Ussage - Inferencing
+### Usage - Inferencing
 
 To inference by the reinforcement learning AI, run `inferencing.py`:
 ```
@@ -80,7 +82,7 @@ python inferencing.py
 ```
 Remember to change the model name inside the code.
 
-### Ussage - XAI (eXplaining AI)
+### Usage - XAI (eXplaining AI)
 
 To explaning the reinforcement learning AI by CAM (a kind of XAI), run `cam.py`:
 ```
